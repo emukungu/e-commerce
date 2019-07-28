@@ -1,0 +1,18 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+  <ul>
+    {% for product in context %}  
+      <div class="card" style="display: inline-block; width: 18rem; margin: 10px;">
+          <img src="" class="card-img-top" alt="">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+      </div>
+    {% endfor %}
+  </ul>
+
+{% endblock %}
+

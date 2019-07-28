@@ -1,0 +1,27 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+  <form>
+    <div class="form-group">
+        <label for="product_name">Product Name</label>
+        <input type="text" class="form-control" id="product_name" placeholder="Product name">
+    </div>
+    <div class="form-group">
+      <label for="product_desc">Description</label>
+      <textarea type="text" class="form-control" id="product_desc" placeholder="Description"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="price_in_dollars">Price(USD)</label>
+      <input type="number" class="form-control" id="price_in_dollars" placeholder="Price">
+    </div>
+    <div class="form-group">
+        <label for="price_in_dollars">Seller</label>
+        <input type="text" class="form-control" id="product_seller" placeholder="Seller">
+    </div>
+    <div class="form-group">
+        <label for="product_image">Image</label>
+        <img src="" alt="" class="form-control" id="product_image"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base_layout.html" %}
+
+{% block content %}
+<script>
+  const loc = window.location
+
+  const wsStart = 'ws://'
+  if (loc.protocol == 'https:'){
+    wsStart = 'wss://'
+  }
+  const endpoint = `${wsStart}${loc.host}${loc.pathname}`
+  const socket =new WebSocket(endpoint)
+
+  socket.onmessage = (event) => {
+    console.log('message', event)
+  }
+  socket.onopen = (event) => {
+    console.log('open', event)
+  }
+  socket.onerror = (event) => {
+    console.log('error', event)
+  }
+  socket.onclose = (event) => {
+    console.log('close', event)
+  } 
+
+</script>
+{% endblock %}
